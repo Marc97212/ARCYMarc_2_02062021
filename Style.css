@@ -138,6 +138,9 @@ footer {
     padding: 4%;
     box-shadow: 0 0 16px black;
 }
+.hebergementMainCardFigureImg {
+    display: flex;
+}
 /*hebergement*/
 
 /*Activity*/
@@ -168,3 +171,6 @@ footer {
     padding-bottom: 10%;
     box-shadow: 0 0 16px black;
 }
+
+color: #0065fc;
+#f2f2f2;
