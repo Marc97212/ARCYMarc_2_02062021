@@ -3,14 +3,24 @@ body {
   font-family: "Raleway", "Sans serif";
   margin: 0;
 }
+a {
+    text-decoration: none;
+}
+
 a:link {color: blue;}
 a:visited {color: rgba(0, 0, 0, 0);}
+
 /*header*/
 .header {  
     display: flex;
     align-items: center;
     justify-content: space-between;  
 }
+
+.header a {
+    text-decoration: none;
+}
+
 .imgheader {
     height: 50px;
 }
@@ -30,16 +40,27 @@ a:visited {color: rgba(0, 0, 0, 0);}
     display: flex;
 }
 .searchFiltersone {
-    height: 30px;
+    padding-left: 15px;
+    height: 52px;
+    border: 1px solid;
+    border-color: rgb(235, 235, 235);
 }
+
+.searchFiltersone::placeholder {
+    color: black;
+    opacity: 1;
+}
+
 .inputnav { 
-background-color: blue;
-color: white;
-border-radius: 0 1rem 1rem 0;
-height: 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 0 1rem 1rem 0;
+    height: 52px;
+    border: 0;
 }
 .searchFiltersFilterWrapicon {
-    background-color: #DEEBFF;
+    background-color: #deebff;
+    color: #0065fc;
     border-radius: 100%;
     height: 3rem;
     width: 3rem;
@@ -49,12 +70,19 @@ height: 30px;
     align-items: center;
     justify-content: center;
     margin: -2px;
-    }
+    margin-right: 20px;
+
+}
 .searchFilters {
     display: flex;
    margin-top: 2rem;
    flex-wrap: wrap;
 }
+
+.searchFilters h4 {
+    margin-right: 30px;
+}
+
 .searchFiltersFilter {
     display: flex;
     align-items: center;
@@ -65,12 +93,32 @@ height: 30px;
     cursor: pointer;
     transition-duration: 0.1s;
     font-weight: bold;
+    padding-right: 20px;
 }
 .searchFormWrapicon {
     background-color: #F2F2F2;
     padding: 1rem 1.25rem;
     border-radius: 1rem 0 0 1rem;
     text-align: center;
+}
+.searchResult {
+    display: flex;
+    align-items: center;
+}
+.searchResultWrapiconIcon {
+    
+}
+.searchResultWrapicon {
+    border: solid 1px grey;
+    border-radius: 100%;
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 }
 /*search*/
 
@@ -81,31 +129,35 @@ height: 30px;
     box-sizing: border-box;
 }
 
+.accommodations {
+    display: flex;
+    justify-content: space-between;
+}
+
 /*hebergement*/
 
 .Hebergement {
     background-color: #F2F2F2;
-    display: flow-root;
     padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
     border-radius: 1rem 1rem 1rem 1rem;
-    width: 54%;
-    float: left;
+    width: 65%;
 }
 .hebergementMain {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.hebergementWrapper, .hebergementPopular, .hebergementMain {
+
+.hebergementWrapper, .hebergementPopular {
     background-color: #F2F2F2;
     border-radius: 1.5rem;
     padding: 2rem;
-    }
+}
+
 .hebergementMainCardFigureImg {
-    height: 7rem;
     object-fit: cover;
     max-width: 100%;
     width: 100%;
@@ -119,12 +171,33 @@ height: 30px;
 .hebergmentMainCard {
     background-color: white;
     border-radius:  2rem;
-    width: 22%;
+    width: 33%;
     display: flex;
-    margin: 10px;
-    padding: 4%;
-    box-shadow: 0 0 10px black;
+    margin-bottom: 20px;
+    box-shadow: -1px 2px 27px 0px rgba(189, 189, 189, 0.65);
 }
+
+.hebergmentMainCard a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hebergmentMainCard a figure {
+    margin: 10px;
+}
+
+.hebergmentMainCard h3 {
+    margin-top: 5px;
+}
+
+.hebergmentMainCard .hebergementMainCardDesc,
+.hebergmentMainCard .hebergementMainCardGrade {
+    margin-left: 15px;
+}
+
+
 .hebergementMainCardGradeIcon[data-active=true] {
     color: #0065FC;
 }
@@ -136,7 +209,6 @@ height: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
     width: 20%;
     
 }
@@ -147,15 +219,12 @@ height: 30px;
     width: 100%;
     max-height: 100%;
     border-radius: 1rem 1rem 0 0;
-    
-
 }
 .hebergementMainCard {
     background-color: white;
     border-radius:  2rem;
-    width: auto;
-    width: auto;
-    height: auto;
+    width: 272;
+    height: 152;
     margin: 10px;
     padding: 4%;
     box-shadow: 0 0 16px black;
@@ -165,6 +234,13 @@ height: 30px;
 }
 .hebergementPopularWrapcontent {
     display: flex;
+    flex-direction: row    ;
+    align-items: center;
+}
+.hebergementPopularWrapcontentcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 /*hebergement*/
 
@@ -179,54 +255,65 @@ height: 30px;
     border-radius: 1rem 1rem 0 0;
 }
 .activity {
-    background-color: rgb(185, 185, 185);
+    margin-top: 50px;
+}
+.activity div.row { 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: auto;
     height: 600px;
 }
+
 .activityCardWrapimgImg {
     background-color: white;
+    width: 300px;
+    height: 225px;
+    padding-bottom: 5%;
+}
+.activityCard {
+    width: 23%;
+    color: black;
+    text-decoration: none;
+    box-shadow: -1px 2px 27px 0px rgba(189, 189, 189, 0.65);
     border-radius:  2rem;
-    width: auto;
-    height: auto;
-    padding-bottom: 10%;
-    box-shadow: 0 0 16px black;
 }
-.activityCard1 {
-height: 600px;
-width: auto;
+
+.activityCard:visited {
+    color: black
 }
-.activityCard2 {
-    height: 100px;
-    width: auto;
+
+
+.activityCard1 .activityCardWrapimgImg, .activityCard4 .activityCardWrapimgImg {
+    height: 450px;
 }
-.activityCard3 {
-    height: 100px;
-    width:auto;
+.activityCardWrapimg {
+    text-align: -webkit-center;
 }
-.activityCard4 {
-    height: 600px;
-    width: auto;
-}
-.activityCard5 {
-height: 100px;
-width: auto;    
-}
-.activityCard6 {
-    height: 100px;
-    width: auto;
+
+.activityCard h4 {
+    margin: 0;
+    padding-left: 37px;
+    padding-bottom: 23px;
 }
 
 /*activity*/
 
 /*footer*/
-.footer {
-	display : flex;
+.footer .footerColumnwrapper {
+	display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: rgb(190, 190, 190);
-    margin-top: 5%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 50px;
 }
+
+.footerColumnwrapper a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+}
+
 /*footer*/
