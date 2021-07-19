@@ -250,6 +250,9 @@ a:visited {color: rgba(0, 0, 0, 0);}
 height: 100%;
 width: 90%;
 }
+.hostingMainViewmore {
+    font-weight: bold;
+}
 
 /*hebergement*/
 
