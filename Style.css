@@ -363,6 +363,12 @@ width: 90%;
 .hebergementMainCardFigureImg1 {
         margin-right: 10px;
 }
+.PopularTitle {
+    padding-right: 62px;
+}
+.hebergementPopularTitle {
+    padding-top: 10px;
+}
 @media screen and (min-width: 320px) and (max-width: 475px) {
     .accommodations {
         display: flex;
@@ -403,9 +409,7 @@ width: 90%;
          .searchResultText {
             font-size: smaller;
          }
-         .PopularTitle {
-             padding-right: 63px;
-         }
+         
          .hebergementPopularTitle {
              display: flex;
              align-items: center;
