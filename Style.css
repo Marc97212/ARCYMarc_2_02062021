@@ -7,8 +7,8 @@ a {
     text-decoration: none;
 }
 
-a:link {color: rgb(0, 81, 255);}
-a:visited {color: rgba(0, 0, 0, 0);}
+a:link {color: black;}
+
 
 /*header*/
 .header {  
@@ -25,9 +25,17 @@ a:visited {color: rgba(0, 0, 0, 0);}
 .herdernav {
     display: flex;
     align-items: center;
+    border-top: solid;
 }
 .headerNavLink {
     padding: 20px;
+    color: blue;
+    }
+.headerNavLink1 {
+    border-top: solid blue;
+    color: blue;
+}
+.headerNavLink2 {
     color: blue;
 }
 .logo {
@@ -48,9 +56,11 @@ a:visited {color: rgba(0, 0, 0, 0);}
     }
     .headerNavLink {
         margin: auto;
+        
     }
     .headerNavLink1 {
         border-bottom: solid blue;
+        border-top: antiquewhite;
     }
     .headerSignup {
         order: 1;
@@ -208,6 +218,7 @@ a:visited {color: rgba(0, 0, 0, 0);}
     margin: auto;
     padding: 0 2rem;
     box-sizing: border-box;
+    margin-top: 3px;
 }
 
 .accommodations {
@@ -254,6 +265,18 @@ a:visited {color: rgba(0, 0, 0, 0);}
     -moz-border-radius: 1rem 1rem 0 0;
     -ms-border-radius: 1rem 1rem 0 0;
     -o-border-radius: 1rem 1rem 0 0;
+}
+.hebergementMainCardFigureImg4 {
+    height: 182px;
+    width: 248px;
+}
+.hebergementMainCardFigureImg5 {
+    height: 182px; ;
+    width: 248px;
+}
+.hebergementMainCardFigureImg6 {
+    height: 180px;
+    width: 250px;
 }
 .hebergmentMainCard {
     background-color: white;
@@ -353,9 +376,11 @@ width: 90%;
 }
 .hebergementMainCardFigureCaptionTitle, .hebergementMainCardDesc {
     margin: 0;
+    color: black;
 }
 .hebergementMainCardFigureCaptionTitle {
     margin-top: 22px;
+    font-size: inherit;
 }
 .hebergementPopularWrapcontentContentWhitespace {
     margin-top: 20px;
@@ -368,6 +393,9 @@ width: 90%;
 }
 .hebergementPopularTitle {
     padding-top: 10px;
+}
+.hostingMainViewmore {
+    color: black;
 }
 @media screen and (min-width: 320px) and (max-width: 475px) {
     .accommodations {
@@ -414,7 +442,17 @@ width: 90%;
              display: flex;
              align-items: center;
          }
-    
+         .hebergementMainCardFigureImg4 {
+            max-width: none;
+            width: 170%;
+         }
+         .hebergementMainCardFigureImg6 {
+             max-width: none;
+             width: 212%;
+         }
+         .hebergementMainCardFigureImg5 {
+             width: auto;
+         }
 
 }
 /*hebergement*/
@@ -446,6 +484,18 @@ width: 90%;
     height: 225px;
     padding-bottom: 5%;
 }
+.activityCardWrapimgImg2 {
+    height: 300px;
+}
+.activityCardWrapimgImg3 {
+    height: 140px;
+}
+.activityCardWrapimgImg5 {
+    height: 140px;
+}
+.activityCardWrapimgImg6 {
+    height: 300px;
+}
 .activityCard {
     width: 20%;
     color: black;
@@ -453,14 +503,13 @@ width: 90%;
     box-shadow: -1px 2px 27px 0px rgba(189, 189, 189, 0.65);
     border-radius:  2rem;
 }
-
 .activityCard:visited {
     color: black
 }
 
 
 .activityCard1 .activityCardWrapimgImg, .activityCard4 .activityCardWrapimgImg {
-    height: 450px;
+    height: 555px;
 }
 .activityCardWrapimg {
     text-align: -webkit-center;
@@ -468,7 +517,7 @@ width: 90%;
 
 .activityCard h4 {
     margin-bottom: 0;
-    padding-left: 37px;
+    padding-left: 20px;
     padding-bottom: 10px;
     margin-top: 0;
 }
@@ -505,7 +554,6 @@ width: 90%;
 /*footer*/
 .footer .footerColumnwrapper {
 	display: flex;
-    justify-content: space-around;
     background-color: #f2f2f2;
     padding: 20px;
     margin-top: 50px;
@@ -516,6 +564,9 @@ width: 90%;
     margin-bottom: 20px;
     text-decoration: none;
     color: black;
+}
+.footerColumnwrapperColumn {
+    margin-left: 13%;   
 }
 @media screen and (min-width: 320px) and (max-width: 475px) {
     .footer {
